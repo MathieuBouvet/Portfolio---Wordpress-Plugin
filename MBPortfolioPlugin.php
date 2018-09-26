@@ -17,7 +17,23 @@
  	}
 
  	public function createDrawingPostType(){
- 		
+ 		register_post_type('drawings', array(
+ 			"labels" => array(
+ 				"name" => "Dessins",
+ 				"singular_name" => "Dessin",
+ 				"add_new_item" => "Nouveau Dessin",
+ 				"edit_item" => "Modifier un Dessin",
+ 				"view_item" => "Voir",
+ 			),
+ 			"public" => true,
+ 			"menu_position" => 2,
+ 			"supports" => array(
+ 				"title",
+ 				"editor",
+ 				"thumbnail",
+ 			),
+ 			"has_archive" => true,
+ 		));
  	}
 
  	public static function install(){}
