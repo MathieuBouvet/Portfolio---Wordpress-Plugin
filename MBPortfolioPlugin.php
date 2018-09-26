@@ -12,6 +12,12 @@
  		register_activation_hook(__FILE__, array('MBPortfolioPlugin', 'install'));
  		register_uninstall_hook(__FILE__, array('MBPortfolioPlugin', 'uninstall'));
 
+ 		add_action('init', array($this, 'createDrawingPostType'));
+
+ 	}
+
+ 	public function createDrawingPostType(){
+ 		
  	}
 
  	public static function install(){}
