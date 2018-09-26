@@ -6,4 +6,19 @@
 	Version: 1.0
 */
 
+ class MBPortfolioPlugin {
+
+ 	public function __construct(){
+ 		register_activation_hook(__FILE__, array('MBPortfolioPlugin', 'install'));
+ 		register_uninstall_hook(__FILE__, array('MBPortfolioPlugin', 'uninstall'));
+
+ 	}
+
+ 	public static function install(){}
+ 	public static function uninstall(){}
+
+ }
+
+ new MBPortfolioPlugin();
+
 ?>
